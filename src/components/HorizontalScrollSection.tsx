@@ -130,7 +130,7 @@ const HorizontalScrollSection = () => {
   return (
     <div 
       ref={containerRef} 
-      className="relative h-screen overflow-hidden bg-gradient-to-r from-background via-background/95 to-background"
+      className="relative h-screen overflow-hidden bg-gradient-to-br from-background via-muted/20 to-background"
     >
       <div 
         ref={slidesRef}
@@ -141,7 +141,7 @@ const HorizontalScrollSection = () => {
           return (
             <div 
               key={slide.id}
-              className={`flex-shrink-0 w-screen h-full flex items-center justify-center p-8 ${slide.bgColor}`}
+              className="flex-shrink-0 w-screen h-full flex items-center justify-center p-8 relative"
             >
               <div className="slide-content max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
@@ -233,6 +233,11 @@ const HorizontalScrollSection = () => {
                   {/* Floating elements */}
                   <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-accent rounded-full opacity-60 animate-pulse" />
                   <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-gradient-primary rounded-full opacity-40 animate-pulse delay-1000" />
+                  
+                  {/* Connection line to next slide */}
+                  {index < slides.length - 1 && (
+                    <div className="absolute top-1/2 -right-8 w-16 h-px bg-gradient-to-r from-primary/50 to-transparent" />
+                  )}
                 </div>
               </div>
             </div>
