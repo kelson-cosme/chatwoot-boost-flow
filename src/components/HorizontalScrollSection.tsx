@@ -85,8 +85,8 @@ const HorizontalScrollSection = () => {
       scrollTrigger: {
         trigger: container,
         start: "top top",
-        end: () => `+=${totalWidth - slideWidth}`,
-        scrub: 1,
+        end: () => `+=${totalWidth * 2}`, // Increased duration significantly
+        scrub: 0.5, // Slower, smoother scrub
         pin: true,
         anticipatePin: 1,
         invalidateOnRefresh: true
@@ -105,13 +105,13 @@ const HorizontalScrollSection = () => {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 1,
+          duration: 1.5,
           ease: "power2.out",
           scrollTrigger: {
             trigger: slide,
-            start: "left 80%",
-            end: "left 20%",
-            toggleActions: "play reverse play reverse",
+            start: "left 90%", // Start earlier
+            end: "left 10%", // End later
+            toggleActions: "play none none reverse",
             containerAnimation: scrollTween
           }
         }
