@@ -145,7 +145,7 @@ const HorizontalScrollSection = () => {
             >
               <div className="slide-content max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
-                <div className="space-y-8">
+                <div className="space-y-6">
                   <div className="space-y-4">
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border/50">
                       <Icon className="w-5 h-5 text-primary" />
@@ -154,7 +154,7 @@ const HorizontalScrollSection = () => {
                       </span>
                     </div>
                     
-                    <h2 className="text-4xl lg:text-6xl font-bold leading-tight">
+                    <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
                       {slide.title.split(' ').map((word, i) => (
                         <span key={i} className={i % 2 === 1 ? 'text-primary' : ''}>
                           {word}{' '}
@@ -162,7 +162,7 @@ const HorizontalScrollSection = () => {
                       ))}
                     </h2>
                     
-                    <p className="text-xl text-muted-foreground leading-relaxed">
+                    <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
                       {slide.description}
                     </p>
                   </div>
@@ -171,15 +171,15 @@ const HorizontalScrollSection = () => {
                     {slide.features.map((feature, featureIndex) => (
                       <span 
                         key={featureIndex}
-                        className="px-3 py-1 text-sm bg-card/30 backdrop-blur-sm border border-border/30 rounded-full text-muted-foreground"
+                        className="px-3 py-1 text-xs bg-card/30 backdrop-blur-sm border border-border/30 rounded-full text-muted-foreground"
                       >
                         {feature}
                       </span>
                     ))}
                   </div>
 
-                  <div className="pt-4">
-                    <Button variant="hero" size="lg" className="group">
+                  <div className="pt-2">
+                    <Button variant="hero" className="group">
                       Experimentar Grátis
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>

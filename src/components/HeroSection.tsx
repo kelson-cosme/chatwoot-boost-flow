@@ -54,22 +54,22 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-6 py-20 text-center z-10">
         <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl lg:text-8xl font-bold leading-tight">
-              <span className="hero-title-part-1">Chatwoot + </span>
-              <span className="hero-title-part-2 bg-gradient-primary bg-clip-text text-transparent inline-block">IA Automação</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="hero-title-part-1">Plataforma de Atendimento </span>
+              <span className="hero-title-part-2 bg-gradient-primary bg-clip-text text-transparent inline-block">+ IA Automação</span>
             </h1>
             
-            <p className="hero-subtitle text-xl lg:text-2xl text-muted-foreground leading-relaxed mt-8 max-w-2xl mx-auto">
+            <p className="hero-subtitle text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed mt-6 max-w-2xl mx-auto">
               Transforme seu atendimento com agentes inteligentes que trabalham 24/7. 
               Automatize conversas, qualifique leads e aumente suas vendas.
             </p>
 
-            <div className="hero-buttons mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-4 group">
+            <div className="hero-buttons mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="lg" className="group">
                 Começar Agora
                 <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+              <Button variant="outline" size="lg">
                 Ver Demo
               </Button>
             </div>

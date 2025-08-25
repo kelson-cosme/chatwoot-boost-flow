@@ -66,11 +66,11 @@ const features = [
 
 const FeaturesSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const cards = cardsRef.current?.children;
+      const cards = cardsRef.current;
       if (!cards) return;
 
       gsap.fromTo(cards, 
@@ -99,7 +99,8 @@ const FeaturesSection = () => {
       );
 
       // Hover animations
-      Array.from(cards).forEach((card) => {
+      cards.forEach((card) => {
+        if (!card) return;
         card.addEventListener('mouseenter', () => {
           gsap.to(card, {
             y: -10,
@@ -125,24 +126,28 @@ const FeaturesSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-background">
+    <section id="features" ref={sectionRef} className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Recursos que{' '}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Revolucionam
             </span>{' '}
             seu Atendimento
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Combine o poder do Chatwoot com inteligência artificial avançada para criar 
+          <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Combine o poder da nossa plataforma com inteligência artificial avançada para criar 
             a melhor experiência de atendimento ao cliente do mercado.
           </p>
         </div>
 
         <div 
-          ref={cardsRef}
+          ref={el => {
+            if (el) {
+              cardsRef.current = Array.from(el.children) as HTMLDivElement[];
+            }
+          }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {features.map((feature, index) => {
@@ -150,6 +155,7 @@ const FeaturesSection = () => {
             return (
               <Card 
                 key={index}
+                ref={el => cardsRef.current[index] = el}
                 className="group bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/80 transition-all duration-300 shadow-card hover:shadow-glow/20"
               >
                 <CardContent className="p-6">
@@ -158,10 +164,10 @@ const FeaturesSection = () => {
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>

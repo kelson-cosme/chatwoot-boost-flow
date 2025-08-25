@@ -97,21 +97,21 @@ const PricingSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-secondary">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Planos que{' '}
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Cabem
-            </span>{' '}
-            no seu Bolso
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Escolha o plano ideal para sua empresa e comece a automatizar seu atendimento hoje mesmo. 
-            Todos os planos incluem 14 dias de teste grátis.
-          </p>
-        </div>
+    <section id="pricing" ref={sectionRef} className="py-20 bg-gradient-secondary">
+    <div className="container mx-auto px-6">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          Planos que{' '}
+          <span className="bg-gradient-accent bg-clip-text text-transparent">
+            Cabem
+          </span>{' '}
+          no seu Bolso
+        </h2>
+        <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+          Escolha o plano ideal para sua empresa e comece a automatizar seu atendimento hoje mesmo. 
+          Todos os planos incluem 14 dias de teste grátis.
+        </p>
+      </div>
 
         <div ref={cardsRef} className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
