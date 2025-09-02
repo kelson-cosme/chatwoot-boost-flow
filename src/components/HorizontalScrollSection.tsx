@@ -136,7 +136,7 @@ const HorizontalScrollSection = () => {
                     </div>
                   </div>
                   
-                  <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
+                  <h2 className="text-3xl lg:text-5xl font-normal leading-tight">
                     {slide.title.split(' ').map((word, i) => (
                       <span key={i} className={i % 2 === 1 ? 'text-primary' : ''}>
                         {word}{' '}
@@ -152,7 +152,7 @@ const HorizontalScrollSection = () => {
                     {slide.features.map((feature, featureIndex) => (
                       <span 
                         key={featureIndex}
-                        className="px-3 py-1 text-xs bg-card/30 backdrop-blur-sm border border-border/30 rounded-full text-muted-foreground"
+                        className="px-3 py-1 text-xs bg-card/30 backdrop-blur-sm border border-border/30 rounded-full text-muted-foreground font-extralight"
                       >
                         {feature}
                       </span>
@@ -160,7 +160,7 @@ const HorizontalScrollSection = () => {
                   </div>
 
                   <div className="pt-2">
-                    <Button variant="hero" className="group">
+                    <Button variant="hero" className="group font-extralight">
                       Experimentar Grátis
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>

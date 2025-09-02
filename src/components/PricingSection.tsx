@@ -100,7 +100,7 @@ const PricingSection = () => {
     <section id="pricing" ref={sectionRef} className="py-20 bg-gradient-secondary">
     <div className="container mx-auto px-6">
       <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+        <h2 className="text-3xl lg:text-4xl font-normal mb-4">
           Planos que{' '}
           <span className="bg-gradient-accent bg-clip-text text-transparent">
             Cabem
@@ -133,9 +133,9 @@ const PricingSection = () => {
               )}
 
               <CardHeader className="text-center pb-4">
-                <h3 className="text-2xl font-bold">{plan.name}</h3>
+                <h3 className="text-2xl font-normal">{plan.name}</h3>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold">{plan.price}</span>
+                  <span className="text-4xl font-normal">{plan.price}</span>
                   <span className="text-muted-foreground">{plan.period}</span>
                 </div>
                 <p className="text-muted-foreground mt-2">{plan.description}</p>

@@ -54,7 +54,7 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-6 py-20 text-center z-10">
         <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight">
               <span className="hero-title-part-1">Plataforma de Atendimento </span>
               <span className="hero-title-part-2 bg-gradient-primary bg-clip-text text-transparent inline-block">+ IA Automação</span>
             </h1>

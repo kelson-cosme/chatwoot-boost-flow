@@ -129,7 +129,7 @@ const FeaturesSection = () => {
     <section id="features" ref={sectionRef} className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-3xl lg:text-4xl font-normal mb-4">
             Recursos que{' '}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Revolucionam
@@ -164,7 +164,7 @@ const FeaturesSection = () => {
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-normal mb-2 group-hover:text-primary transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">

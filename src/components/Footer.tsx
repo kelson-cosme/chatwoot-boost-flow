@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Coluna 1: Logo e Newsletter */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">kemax</h3>
+            <h3 className="text-2xl font-normal bg-gradient-primary bg-clip-text text-transparent">kemax</h3>
             <p className="text-muted-foreground">Automação e IA para o seu negócio.</p>
             <div className="flex gap-2">
               <Input placeholder="Seu melhor e-mail" className="bg-background" />
@@ -19,7 +19,7 @@ const Footer = () => {
 
           {/* Coluna 2: Links */}
           <div className="md:ml-auto">
-            <h4 className="font-semibold mb-4">Produto</h4>
+            <h4 className="font-normal mb-4">Produto</h4>
             <ul className="space-y-2">
               <li><a href="#features" className="text-muted-foreground hover:text-primary">Recursos</a></li>
               <li><a href="#pricing" className="text-muted-foreground hover:text-primary">Planos</a></li>
@@ -29,7 +29,7 @@ const Footer = () => {
 
           {/* Coluna 3: Links */}
           <div>
-            <h4 className="font-semibold mb-4">Empresa</h4>
+            <h4 className="font-normal mb-4">Empresa</h4>
             <ul className="space-y-2">
               <li><a href="#" className="text-muted-foreground hover:text-primary">Sobre nós</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary">Contato</a></li>
@@ -39,7 +39,7 @@ const Footer = () => {
 
           {/* Coluna 4: Links */}
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-normal mb-4">Legal</h4>
             <ul className="space-y-2">
               <li><a href="#" className="text-muted-foreground hover:text-primary">Termos de Serviço</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary">Política de Privacidade</a></li>

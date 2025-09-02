@@ -63,7 +63,7 @@ const CTASection = () => {
 
       <div className="container mx-auto px-6 relative">
         <div ref={contentRef} className="text-center max-w-4xl mx-auto space-y-8">
-          <h2 className="text-4xl lg:text-6xl font-bold leading-tight">
+          <h2 className="text-4xl lg:text-6xl font-light leading-tight">
             Pronto para{' '}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
               Revolucionar
@@ -90,17 +90,17 @@ const CTASection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12">
             <div className="bg-card/30 backdrop-blur-sm rounded-lg p-6 border border-border/30">
-              <div className="text-3xl font-bold text-primary mb-2">14 dias</div>
+              <div className="text-3xl font-light text-primary mb-2">14 dias</div>
               <div className="text-muted-foreground">Teste grátis</div>
             </div>
             
             <div className="bg-card/30 backdrop-blur-sm rounded-lg p-6 border border-border/30">
-              <div className="text-3xl font-bold text-accent mb-2">5 min</div>
+              <div className="text-3xl font-light text-accent mb-2">5 min</div>
               <div className="text-muted-foreground">Para configurar</div>
             </div>
             
             <div className="bg-card/30 backdrop-blur-sm rounded-lg p-6 border border-border/30">
-              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-3xl font-light text-primary mb-2">24/7</div>
               <div className="text-muted-foreground">Suporte total</div>
             </div>
           </div>

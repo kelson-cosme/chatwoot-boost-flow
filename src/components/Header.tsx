@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Logo from "@/assets/kemax.png"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,9 +30,7 @@ const Header = () => {
       )}
     >
       <div className="container mx-auto px-6 h-20 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-          kemax
-        </a>
+        <img className='max-w-[7em]' src={Logo} alt="" />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
