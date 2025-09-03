@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Logo from "@/assets/kemax.png"
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +31,9 @@ const Header = () => {
       )}
     >
       <div className="container mx-auto px-6 h-20 flex justify-between items-center">
-        <img className='max-w-[7em]' src={Logo} alt="" />
+        <Link to={"https://www.kemax.com.br"}>
+          <img className='max-w-[7em]' src={Logo} alt="" />
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
