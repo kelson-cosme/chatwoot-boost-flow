@@ -123,7 +123,7 @@ All colors MUST be HSL.
 
 @font-face {
   font-family: 'Impact';
-  src: url('../assets/fonts/impact.ttf') format('truetype');
+  src: url('../src/assets/fonts/impact.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
