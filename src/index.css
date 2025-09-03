@@ -117,7 +117,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    /* Adicionando a fonte Montserrat como padrão */
     font-family: 'Impact', sans-serif;
   }
+}
+
+@font-face {
+  font-family: 'Impact';
+  src: url('../assets/fonts/impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
